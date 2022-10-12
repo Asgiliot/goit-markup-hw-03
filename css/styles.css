@@ -24,6 +24,21 @@ body {
   background-color: var(--white-color);
   font-family: Roboto, sans-serif;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.section{
+  margin-bottom: 94px;
+}
 
 /* Хедер лого*/
 .logo {
@@ -49,8 +64,6 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 24px;
-  padding-bottom: 25px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -59,25 +72,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .nav-list .link,
-.link-activ {
+.activ-link {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav-list li,
-.autent-list li{
+.nav-list > li,
+.autent-list > li{
   margin-right: 50px;
 }
-.nav-list li:last-child,
-.autent-list li:last-child{
+.nav-list > li:last-child,
+.autent-list > li:last-child{
   margin-right: 0px;
 }
-.link-activ {
+.activ-link{
   color: var(--accent-color);
 }
 .nav-list .link:hover,
@@ -94,6 +109,8 @@ body {
 }
 .autent-list{
   margin-left: auto;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .autent-list .link {
   color: var(--main-text-color);
@@ -113,7 +130,11 @@ body {
   text-align: center;
 }
 .hero-title{
-  margin: 0;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
 
   color: var(--white-color);
   text-transform: uppercase;
@@ -123,10 +144,9 @@ body {
   letter-spacing: 0.06em;
 }
 .hero-button {
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  border: none;
-  
+  display: inline-block;
+  width: 216px;
+  height: 50px;
 
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -134,34 +154,75 @@ body {
   line-height: 1.9;
   letter-spacing: 0.06em;
   cursor: pointer;
-  text-align: center;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 4px;
 }
 
 /* принципы */
 
-.principle-title {
-  color: var(--title-text-color);
+.principles-list{
+  display: flex;
+  margin: 0;
+}
+.principles-list > li{
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+.principles-list > li:last-child{
+  margin-right: 0;
+}
 
+.principle-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  color: var(--title-text-color);
 }
 .principle {
+  margin: 0;
+
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
 /* чем заняты */
-.activity-title {
-  color: var(--title-text-color);
 
+.alignment {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.activity-title {
+  margin: 0;
+  
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+.activity-list{
+  display: flex;
+  margin: 0;
+}
+.activity-list > li{
+  margin-right: 30px;
+}
+.activity-list > li:last-child{
+  margin-right: 0;
+}
+.activity-list a{
+  display: block;
 }
 
 /* наша команда */
@@ -170,22 +231,37 @@ body {
   background-color: #f5f4fa;
 }
 .team-title {
-  color: var(--title-text-color);
-
+  margin: 0;
+  
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+.team-list{
+  display: flex;
+  margin: 0;
+}
+.team-list > li{
+  margin-right: 30px;
+}
+.team-list > li:last-child{
+  margin-right: 0;
 }
 .member-name {
-  color: var(--title-text-color);
-
+  margin: 0;
+  margin-top: 30px;
+ 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
 }
 .profession {
   font-size: 16px;
@@ -197,14 +273,30 @@ body {
 .footer {
   background-color: var(--footer-hero-bgcolor);
 }
+.footer-padding{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex-direction: column;
+}
 .footer-logo {
-  color: var(--white-color);
+  margin-bottom: 20px;
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
+  color: var(--white-color);
+}
+.address-list{
+  margin: 0;
+}
+.address-list > li{
+  margin-bottom: 9px;
+}
+.address-list > li:last-child{
+  margin: 0;
 }
 .contacts {
   color: var(--contacts-color);

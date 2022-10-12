@@ -18,7 +18,7 @@
       <nav class="site-nav">
         <a class="logo" href="./index.html"><span class="blue-part">Web</span>Studio</a>
         <ul class="nav-list">
-          <li><a class="link, link-activ" href="./index.html">Студія</a></li>
+          <li><a class="activ-link" href="./index.html">Студія</a></li>
           <li><a class="link" href="./portfolio.html">Портфоліо</a></li>
           <li><a class="link" href="">Контакти</a></li>
         </ul>
@@ -32,14 +32,15 @@
   </header>
                                    <!-- контент -->
   <main>
-    <section class="hero">
+    <section class="section hero">
       <h1 class="hero-title" >Ефективні рішення для вашого бізнесу</h1>
       <button class="hero-button" type="button">Замовити послугу</button>
     </section>
                                     <!-- принцыпы -->
     <section class="section principles">
-      <h2 class="invisible-title">Основні принципи</h2>
-      <ul>
+     <div class="content">
+      <h2 class="visually-hidden">Основні принципи</h2>
+      <ul class="principles-list">
         <li>
           <h3 class="principle-title">УВАГА ДО ДЕТАЛЕЙ</h3>
           <p class="principle">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
@@ -57,52 +58,63 @@
           <p class="principle">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
         </li>
       </ul>
+     </div>
     </section>
                                      <!-- чем занимаемся -->
     <section class="section activity"> 
-      <h2 class="activity-title">Чим ми займаємося</h2>
-      <ul>
-        <li><a href=""><img src="./images/section03_01.jpg" alt="Програмне забезпечення" width="370"></a></li>
-        <li><a href=""><img src="./images/section03_02.jpg" alt="Мобільні додатки" width="370"></a></li>
-        <li><a href=""><img src="./images/section03_03.jpg" alt="Дизайн інтенрфейса" width="370"></a></li>
-      </ul>
+      <div class="content alignment">
+        <h2 class="activity-title">Чим ми займаємося</h2>
+      </div>
+      <div class="content">
+        <ul class="activity-list">
+          <li><a href="#"><img src="./images/section03_01.jpg" alt="Програмне забезпечення" width="370"></a></li>
+          <li><a href="#"><img src="./images/section03_02.jpg" alt="Мобільні додатки" width="370"></a></li>
+          <li><a href="#"><img src="./images/section03_03.jpg" alt="Дизайн інтенрфейса" width="370"></a></li>
+        </ul>
+      </div>
     </section>
                                  <!-- Наша команда -->
     <section class="section team">
-      <h2 class="team-title">Наша команда</h2>
-      <ul class="team-list">
-        <li>
-          <a href=""><img src="./images/ourTeam_01.jpg" alt="Ігор Дем'яненко" width="270"></a>
-          <h3 class="member-name">Ігор Дем'яненко</h3>
-          <p class="profession">Product Designer</p>
-        </li>
-        <li>
-          <a href=""><img src="./images/ourTeam_02.jpg" alt="Ольга Рєпіна" width="270"></a>
-          <h3 class="member-name">Ольга Рєпіна</h3>
-          <p class="profession">Frontend Developer</p>
-        </li>
-        <li>
-          <a href=""><img src="./images/ourTeam_03.jpg" alt="Микола Тарасов" width="270"></a>
-          <h3 class="member-name">Микола Тарасов</h3>
-          <p class="profession">Marketing</p>
-        </li>
-        <li>
-          <a href=""><img src="./images/ourTeam_04.jpg" alt="Михайло Єрмаков" width="270"></a>
-          <h3 class="member-name">Михайло Єрмаков</h3>
-          <p class="profession">UI Designer</p>
-        </li>
-      </ul>
+      <div class="content alignment">
+        <h2 class="team-title">Наша команда</h2>
+      </div>
+      <div class="content">
+        <ul class="team-list">
+          <li>
+            <a href=""><img src="./images/ourTeam_01.jpg" alt="Ігор Дем'яненко" width="270"></a>
+            <h3 class="member-name">Ігор Дем'яненко</h3>
+            <p class="profession">Product Designer</p>
+          </li>
+          <li>
+            <a href=""><img src="./images/ourTeam_02.jpg" alt="Ольга Рєпіна" width="270"></a>
+            <h3 class="member-name">Ольга Рєпіна</h3>
+            <p class="profession">Frontend Developer</p>
+          </li>
+          <li>
+            <a href=""><img src="./images/ourTeam_03.jpg" alt="Микола Тарасов" width="270"></a>
+            <h3 class="member-name">Микола Тарасов</h3>
+            <p class="profession">Marketing</p>
+          </li>
+          <li>
+            <a href=""><img src="./images/ourTeam_04.jpg" alt="Михайло Єрмаков" width="270"></a>
+            <h3 class="member-name">Михайло Єрмаков</h3>
+            <p class="profession">UI Designer</p>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="footer">
-    <a class="footer-logo" href="./index.html"><span class="blue-part">Web</span>Studio</a>
-    <address>
-      <ul>
-        <li><a class="contacts" href="">м. Київ, пр-т Лесі Українки, 26</a></li>
-        <li><a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>></li>
-        <li><a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
-    </address>
+    <div class="content footer-padding">
+      <a class="footer-logo" href="./index.html"><span class="blue-part">Web</span>Studio</a>
+      <address>
+        <ul class="address-list" >
+          <li><a class="contacts" href="">м. Київ, пр-т Лесі Українки, 26</a></li>
+          <li><a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>></li>
+          <li><a class="contacts" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        </ul>
+      </address>
+    </div>
   </footer>
 </body>
 </html>
