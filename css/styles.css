@@ -141,6 +141,8 @@ body {
 .hero {
   background-color: var(--footer-hero-bgcolor); 
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title{
   width: 696px;
@@ -212,6 +214,9 @@ body {
 }
 /* чем заняты */
 
+.column{
+  flex-direction: column;
+}
 .activity-title {
   margin: 0;
   margin-bottom: 50px;
@@ -236,8 +241,12 @@ body {
 .activity-list > li:last-child{
   margin-right: 0;
 }
-.activity-list a{
+.activity-list img,
+.team-list img,
+.projects-list img{
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* наша команда */
@@ -266,13 +275,19 @@ body {
 }
 .team-list > li{
   margin-right: 30px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+  0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .team-list > li:last-child{
   margin-right: 0;
 }
 .member-name {
   margin: 0;
-  margin-top: 30px;
+  margin-bottom: 10px;
  
   font-weight: 500;
   font-size: 16px;
@@ -284,15 +299,19 @@ body {
 }
 .profession {
   margin: 0;
-  margin-top: 10px;
-  margin-bottom: 30px;
 
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
 }
+.team-description{
+  width: 100%;
+  padding: 30px 10px;
+}
+
 /* подвал */
+
 .footer {
   background-color: var(--footer-hero-bgcolor);
 }
@@ -321,7 +340,7 @@ body {
 .address-list > li:last-child{
   margin: 0;
 }
-.contacts {
+.contacts{
   color: var(--contacts-color);
 
   font-size: 14px;
@@ -331,7 +350,15 @@ body {
 }
 .contacts:hover,
 .contacts:focus {
+  color: var(--accent-color);
+}
+.contacts-geo {
   color: var(--white-color);
+
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 }
 
 /* страница Портфолио */
@@ -352,9 +379,6 @@ body {
   flex-wrap: wrap;
   margin: 0;
 
-}
-.projects-column{
-  flex-direction: column;
 }
 .filter-button {
   padding: 6px 25px 6px 25px;
@@ -417,8 +441,6 @@ body {
 }
 .projects-content{
   padding: 20px 24px;
-  margin-top: -4px;
   border: 1px solid #EEEEEE;
   border-top: none;
 }
-
